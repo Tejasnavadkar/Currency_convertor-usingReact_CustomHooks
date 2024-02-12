@@ -10,6 +10,7 @@ function App() {
   const [from, setFrom] = useState("usd")
   const [to, setTo] = useState("inr")
   const [convertedAmount, setConvertedAmount] = useState(0)
+//   const[currencychange,setCurrencyChange] = useState("")
 
   const currencyInfo = useCurrencyInfo(from)
 
@@ -47,7 +48,7 @@ function App() {
                             label="From"
                             amount={amount}
                             currencyOptions={options}
-                            onCurrencyChange={(currency) => setAmount(amount)}
+                            onCurrencyChange={(currency) => setAmount(amount) /*setCurrencyChange(currency)*/}
                             selectCurrency={from}
                             onAmountChange={(amount) => setAmount(amount)}
                         />
